@@ -8,7 +8,7 @@ if(isset($_POST['fname']) && isset($_POST['pass'])){
 	$u = $_POST['fname'];
 	$p = $_POST['pass'];
 	$sql = "SELECT * FROM user_info WHERE uname = '$u' AND pass = '$p' AND role=''";
-	$sql2 = "SELECT * FROM user_info WHERE '$u' = 'admin' AND '$p' =12345 AND role='admin'";
+	$sql2 = "SELECT * FROM user_info WHERE '$u' = 'admin' AND '$p' ='admin' AND role='admin'";
 	
 	$result = mysqli_query($conn, $sql);
 	$result2 = mysqli_query($conn, $sql2);
